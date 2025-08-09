@@ -1,0 +1,370 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    background-color:rgb(223, 215, 180)
+}
+
+#face {
+    height: 175px;
+    width: 175px;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 10px 0px 45px red;
+}
+
+#eyes {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+    overflow: hidden;
+}
+
+#eyes1 {
+    background-color: black;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    animation-name: box;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+        animation-fill-mode: forwards;
+
+
+}
+
+#eyes2 {
+    background-color:black;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    animation-name: box;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+        animation-fill-mode: forwards;
+
+
+}
+
+#iris1 {
+    background-color:whitesmoke;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin-top: 12px;
+}
+
+#iris2 {
+    background-color:whitesmoke;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin-top: 12px;
+}
+
+#mouth {
+    height: 20px;
+    width: 80px;
+    background-color: black ;
+    border-radius: 0% 0% 50% 50%;
+    margin-left: 50px;
+}
+
+#tounge {
+    height: 45px;
+    width: 40px;
+    background-color: red;
+    border-radius: 0% 0% 50% 50%;
+    margin-top: 30px;
+    margin-left: 25px;
+      animation-name: tt;
+  animation-duration: 2ms;
+  animation-iteration-count: 1000;
+  animation-delay:2s;
+   animation-name: box;
+    animation-iteration-count: infinite;
+      animation-direction: alternate-reverse;
+        animation-fill-mode: forwards;
+
+}
+@keyframes tt{
+    from{height:5px;}
+    to{height:55px}
+}
+
+
+#stomach{
+      background-color:rgb(8, 33, 112);
+      height: 190px;
+      width: 150px;
+      border-radius: 25%;
+    margin-top: 179px;
+   margin-right: 140px;
+   margin-left: -160px;
+}
+#legs{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 350px;
+}
+#leg1{
+  background-color: yellow;
+  height: 130px;
+  width: 20px;
+  border-radius: 50%;
+  margin-left: -450px;
+  /* animation: spin 1s linear infinite; */
+}
+#leg2{
+  background-color: yellow;
+  height: 130px;
+  width: 20px;
+  border-radius: 50%;
+  margin-left: -670px;
+  margin-right: -20px;
+  /* animation: spin 1s linear infinite; */
+}
+#hands{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 185px;
+}
+#hand1{
+  background-color: yellow;
+  height: 130px;
+  width: 20px;
+  border-radius: 50%;
+  margin-left: -430px;
+  /* animation: spin 1s linear infinite; */
+}
+#hand2{
+  background-color: yellow;
+  height: 130px;
+  width: 20px;
+  border-radius: 50%;
+  margin-left: 80px;
+  /* animation: spin 1s linear infinite; */
+}
+@keyframes box{
+  0%   {background-color:red; }
+  10%  {background-color:yellow;  }
+  20%  {background-color:blue; } 
+  30%  {background-color:green;  }
+  40% {background-color:blueviolet }
+  50%   {background-color: brown  }
+  60%  {background-color:yellow;  }
+  70%  {background-color:blue;  }
+  80%  {background-color:green;  }
+  90%  {background-color:violet }
+  100% {background-color:red; }
+}
+
+
+
+/* --- Dancing Animations --- */
+@keyframes headDance {
+  0%, 100% { transform: rotate(0deg) translateY(0); }
+  25% { transform: rotate(-5deg) translateY(-5px); }
+  50% { transform: rotate(5deg) translateY(5px); }
+  75% { transform: rotate(-5deg) translateY(-5px); }
+}
+
+@keyframes armWaveLeft {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-30deg); }
+}
+
+@keyframes armWaveRight {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(30deg); }
+}
+
+@keyframes legMoveLeft {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(20deg); }
+}
+
+@keyframes legMoveRight {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-20deg); }
+}
+
+/* Apply animations */
+#face {
+  animation: headDance 1s infinite ease-in-out;
+}
+
+#hand1 {
+  transform-origin: top center;
+  animation: armWaveLeft 0.8s infinite alternate;
+}
+
+#hand2 {
+  transform-origin: top center;
+  animation: armWaveRight 0.8s infinite alternate;
+}
+
+#leg1 {
+  transform-origin: top center;
+  animation: legMoveLeft 1s infinite alternate;
+}
+
+#leg2 {
+  transform-origin: top center;
+  animation: legMoveRight 1s infinite alternate;
+}
+
+
+
+/* --- Faster & Attractive Dancing Animations --- */
+@keyframes headDance {
+  0%, 100% { transform: rotate(0deg) translateY(0); }
+  25% { transform: rotate(-12deg) translateY(-8px); }
+  50% { transform: rotate(12deg) translateY(8px); }
+  75% { transform: rotate(-12deg) translateY(-8px); }
+}
+
+@keyframes armWaveLeft {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-50deg); }
+}
+
+@keyframes armWaveRight {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(50deg); }
+}
+
+@keyframes legMoveLeft {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(30deg); }
+}
+
+@keyframes legMoveRight {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-30deg); }
+}
+
+/* Apply animations with more speed */
+#face {
+  animation: headDance 0.5s infinite ease-in-out; /* faster head bob */
+}
+
+#hand1 {
+  transform-origin: top center;
+  animation: armWaveLeft 0.4s infinite alternate ease-in-out; /* quicker waving */
+}
+
+#hand2 {
+  transform-origin: top center;
+  animation: armWaveRight 0.4s infinite alternate ease-in-out;
+}
+
+#leg1 {
+  transform-origin: top center;
+  animation: legMoveLeft 0.5s infinite alternate ease-in-out;
+}
+
+#leg2 {
+  transform-origin: top center;
+  animation: legMoveRight 0.5s infinite alternate ease-in-out;
+}
+
+
+
+
+
+/* Bounce the whole robot */
+@keyframes bodyBounce {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-15px) rotate(-3deg); }
+  50% { transform: translateY(0) rotate(3deg); }
+  75% { transform: translateY(-15px) rotate(-3deg); }
+}
+
+/* Apply to a wrapper around the robot */
+#robot {
+  animation: bodyBounce 0.6s infinite ease-in-out;
+}
+
+
+
+
+
+/* Rotate stomach continuously */
+@keyframes stomachSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#stomach {
+  animation: stomachSpin 2s linear infinite;
+}
+
+
+
+/* Continuous spin for limbs */
+@keyframes limbSpinLeft {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes limbSpinRight {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+/* Hands spin */
+#hand1 {
+  transform-origin: top center;
+  animation: limbSpinLeft 1.2s linear infinite;
+}
+
+#hand2 {
+  transform-origin: top center;
+  animation: limbSpinRight 1.2s linear infinite;
+}
+
+/* Legs spin */
+/* #leg1 {
+  transform-origin: top center;
+  animation: limbSpinLeft 1.5s linear infinite;
+}
+
+#leg2 {
+  transform-origin: top center;
+  animation: limbSpinRight 1.5s linear infinite;
+} */
+/* Curtains */
+.curtain {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 120%;
+  background: linear-gradient(to bottom, crimson, darkred);
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.5);
+  z-index: 5;
+}
+
+.curtain-left {
+  left: 0;
+  animation: curtainMoveLeft 15s ease-in-out infinite alternate;
+}
+
+.curtain-right {
+  right: 0;
+  animation: curtainMoveRight 15s ease-in-out infinite alternate;
+}
+
+/* Left Curtain Animation */
+@keyframes curtainMoveLeft {
+  from { transform: translateX(0); }       /* Closed position */
+  to   { transform: translateX(-100%); }   /* Open position */
+}
+
+/* Right Curtain Animation */
+@keyframes curtainMoveRight {
+  from { transform: translateX(0); }       /* Closed position */
+  to   { transform: translateX(100%); }    /* Open position */
+}
